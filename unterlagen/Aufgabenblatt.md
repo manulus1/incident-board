@@ -2,7 +2,7 @@
 
 ## Dein Auftrag
 
-Das interne Status-Dashboard von **NOVA Operations** wurde verändert. Einige Texte, Anzeigen und Werte stimmen nicht mehr.
+Das interne Status-Dashboard von **VIVA Operations** wurde verändert. Einige Texte, Anzeigen und Werte stimmen nicht mehr.
 
 Du übernimmst die Rolle einer Junior-Entwicklerin oder eines Junior-Entwicklers. Stelle das Dashboard Schritt für Schritt wieder her. Du brauchst dafür **keine Programmiererfahrung**
 

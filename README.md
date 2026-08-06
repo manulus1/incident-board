@@ -6,8 +6,7 @@ Offlinefähiges Aufgabenpaket für 15- bis 16-jährige Kandidat:innen ohne vorau
 
 ```text
 Bewerbertag/
-├── backup/start-original/       unveränderte Aufgaben-Vorlage (nur 3 Dateien)
-├── projekt/start/               bearbeitbarer Startstand der Aufgabe
+├── projekt/start/               Startstand der Aufgabe (Vorlage für Reset)
 ├── projekt/showcase/            erweiterte Ansichten (eigene Dateien, in der Nav verlinkt)
 ├── scripts/reset.ps1            Kandidatenordner erzeugen oder zurücksetzen
 └── unterlagen/
@@ -32,7 +31,7 @@ Nicht benötigt werden Internetzugang, Benutzerkonto, Node.js, Paketinstallation
 ## Einmalige Vorbereitung
 
 1. Den vollständigen Ordner auf den Betreuungs-PC kopieren.
-2. Prüfen, dass `backup/start-original` nur `index.html`, `style.css` und `script.js` enthält.
+2. Prüfen, dass `projekt/start` nur `index.html`, `style.css` und `script.js` enthält.
 3. PowerShell im Projektordner öffnen.
 4. Für jede Person einen neutral benannten Arbeitsplatz erzeugen:
 
@@ -53,14 +52,14 @@ Den Showcase-Ordner nicht im Editor als Arbeitsprojekt öffnen.
 
 Falls PowerShell nicht verfügbar ist:
 
-1. `backup/start-original` nach `arbeitsplaetze/Kandidat-03/start` kopieren.
+1. `projekt/start` nach `arbeitsplaetze/Kandidat-03/start` kopieren.
 2. Optional `projekt/showcase` nach `arbeitsplaetze/Kandidat-03/showcase` kopieren, damit die Nav-Links funktionieren.
 3. In `start` die Datei `index.html` doppelklicken.
 4. Genau den Ordner `start` im Editor öffnen.
 
 ## Sicherer Reset
 
-Der Reset löscht keinen Arbeitsstand. Existiert der angegebene Kandidatenordner bereits, wird er mit Zeitstempel umbenannt. Danach wird eine frische Kopie aus `backup/start-original` erstellt.
+Der Reset löscht keinen Arbeitsstand. Existiert der angegebene Kandidatenordner bereits, wird er mit Zeitstempel umbenannt. Danach wird eine frische Kopie aus `projekt/start` erstellt.
 
 ```powershell
 .\scripts\reset.ps1 -Name Kandidat-01

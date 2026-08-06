@@ -7,7 +7,7 @@ param(
 $ErrorActionPreference = "Stop"
 
 $projektRoot = Split-Path -Parent $PSScriptRoot
-$vorlage = Join-Path $projektRoot "backup\start-original"
+$vorlage = Join-Path $projektRoot "projekt\start"
 $showcaseQuelle = Join-Path $projektRoot "projekt\showcase"
 $arbeitsplaetze = Join-Path $projektRoot "arbeitsplaetze"
 $ziel = Join-Path $arbeitsplaetze $Name
@@ -15,7 +15,7 @@ $zielStart = Join-Path $ziel "start"
 $zielShowcase = Join-Path $ziel "showcase"
 
 if (-not (Test-Path $vorlage)) {
-    throw "Die unveraenderte Vorlage fehlt: $vorlage"
+    throw "Der Startordner fehlt: $vorlage"
 }
 
 if (-not (Test-Path $showcaseQuelle)) {
