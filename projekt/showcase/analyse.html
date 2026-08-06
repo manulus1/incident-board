@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Live-Analyse · NOVA Operations</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="showcase.css" />
+    <link rel="stylesheet" href="showcase-fx.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="seitenleiste">
+        <a class="marke" href="../start/index.html" aria-label="NOVA Operations Startseite">
+          NOVA<span>//OPS</span>
+        </a>
+
+        <nav aria-label="Hauptnavigation">
+          <p class="nav-label">Arbeitsbereich</p>
+          <a class="nav-eintrag" href="../start/index.html">
+            <span class="nav-symbol">01</span>
+            Übersicht
+          </a>
+          <a class="nav-eintrag" href="../start/index.html#systeme">
+            <span class="nav-symbol">02</span>
+            Systeme
+          </a>
+          <a class="nav-eintrag" href="../start/index.html#ereignisse">
+            <span class="nav-symbol">03</span>
+            Ereignisse
+          </a>
+          <p class="nav-label nav-label-zusatz">Lagebild</p>
+          <a class="nav-eintrag" href="incidents.html">
+            <span class="nav-symbol">04</span>
+            Incident-Karte
+            <span class="show-badge">EXTRA</span>
+          </a>
+          <a class="nav-eintrag aktiv" href="analyse.html">
+            <span class="nav-symbol">05</span>
+            Live-Analyse
+            <span class="show-badge">EXTRA</span>
+          </a>
+        </nav>
+
+        <div class="umgebung">
+          <span class="umgebungspunkt"></span>
+          <div>
+            <strong>Operations Center</strong>
+            <span>Nicht Teil der Aufgabe</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="hauptbereich">
+        <header class="kopfzeile">
+          <div>
+            <p class="pfad">Operations / Live-Analyse</p>
+            <h1>Incident Intelligence</h1>
+          </div>
+          <div class="vorfall analyse-live">
+            <span class="live-punkt"></span>
+            <span>ANALYSE LÄUFT</span>
+          </div>
+        </header>
+
+        <main>
+          <div class="demo-hinweis">
+            <span>EXTRA</span>
+            Diese Ansicht ist nicht Teil der Aufgabe.
+          </div>
+
+          <section class="analyse-kopf">
+            <div>
+              <p class="kennung">INCIDENT 07-A · KUNDENPORTAL</p>
+              <h2>Ungewöhnliches Verhalten erkannt</h2>
+              <p>Die Analyse verbindet Ereignisse, Systeme und mögliche Ursachen zu einem gemeinsamen Lagebild.</p>
+            </div>
+            <div class="risikowert">
+              <span>RISIKOWERT</span>
+              <strong>87</strong>
+              <small>von 100</small>
+            </div>
+          </section>
+
+          <div class="analyse-raster">
+            <section class="panel signalpanel" aria-labelledby="signaltitel">
+              <div class="panelkopf">
+                <div>
+                  <p class="kennung">LIVE SIGNAL</p>
+                  <h2 id="signaltitel">Aktivität der letzten 60 Minuten</h2>
+                </div>
+                <span>1-Minuten-Intervall</span>
+              </div>
+              <div class="signaldiagramm">
+                <div class="signalwert">
+                  <strong>2'847</strong>
+                  <span>Ereignisse / min</span>
+                </div>
+                <svg viewBox="0 0 800 220" preserveAspectRatio="none" aria-label="Aktivitätsdiagramm mit starkem Anstieg">
+                  <defs>
+                    <linearGradient id="signalFuellung" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stop-color="#875cff" stop-opacity="0.38" />
+                      <stop offset="100%" stop-color="#875cff" stop-opacity="0" />
+                    </linearGradient>
+                  </defs>
+                  <path class="signalflaeche" d="M0,180 L70,172 L120,178 L180,160 L230,168 L285,155 L340,162 L390,142 L440,151 L485,130 L525,139 L565,108 L605,119 L640,82 L675,95 L705,50 L735,72 L770,25 L800,38 L800,220 L0,220 Z" />
+                  <path class="signallinie" d="M0,180 L70,172 L120,178 L180,160 L230,168 L285,155 L340,162 L390,142 L440,151 L485,130 L525,139 L565,108 L605,119 L640,82 L675,95 L705,50 L735,72 L770,25 L800,38" />
+                </svg>
+                <div class="zeitachse"><span>09:00</span><span>09:20</span><span>09:40</span><span>10:00</span></div>
+              </div>
+            </section>
+
+            <aside class="panel integritaet" aria-labelledby="integritaettitel">
+              <div class="panelkopf">
+                <div>
+                  <p class="kennung">SYSTEM CHECK</p>
+                  <h2 id="integritaettitel">Integrität</h2>
+                </div>
+                <span>3 Prüfungen</span>
+              </div>
+              <div class="pruefwert">
+                <div><span>HTML-Struktur</span><strong>64%</strong></div>
+                <progress value="64" max="100">64%</progress>
+              </div>
+              <div class="pruefwert">
+                <div><span>CSS-Regeln</span><strong>41%</strong></div>
+                <progress class="progress-kritisch" value="41" max="100">41%</progress>
+              </div>
+              <div class="pruefwert">
+                <div><span>JavaScript-Logik</span><strong>72%</strong></div>
+                <progress value="72" max="100">72%</progress>
+              </div>
+            </aside>
+          </div>
+
+          <section class="panel pfadpanel" aria-labelledby="pfadtitel">
+            <div class="panelkopf">
+              <div>
+                <p class="kennung">REKONSTRUKTION</p>
+                <h2 id="pfadtitel">Ablauf des Incidents</h2>
+              </div>
+              <span>Konfidenz 92%</span>
+            </div>
+            <div class="angriffspfad">
+              <article class="pfadschritt erledigt">
+                <span>01</span>
+                <div><small>09:47</small><strong>Änderung erkannt</strong><p>Unbekannte Dateiaktivität</p></div>
+              </article>
+              <i></i>
+              <article class="pfadschritt erledigt">
+                <span>02</span>
+                <div><small>09:49</small><strong>Anzeige verändert</strong><p>Dashboard-Texte manipuliert</p></div>
+              </article>
+              <i></i>
+              <article class="pfadschritt aktiv">
+                <span>03</span>
+                <div><small>09:51</small><strong>Dienst gestört</strong><p>Kundenportal offline</p></div>
+              </article>
+              <i></i>
+              <article class="pfadschritt">
+                <span>04</span>
+                <div><small>OFFEN</small><strong>Wiederherstellung</strong><p>Massnahmen ausstehend</p></div>
+              </article>
+            </div>
+          </section>
+
+          <div class="analyse-raster analyse-unten">
+            <section class="panel terminal" aria-labelledby="terminaltitel">
+              <div class="panelkopf">
+                <div>
+                  <p class="kennung">EVIDENCE STREAM</p>
+                  <h2 id="terminaltitel">Live-Protokoll</h2>
+                </div>
+                <span>AUTO-SCROLL</span>
+              </div>
+              <div class="terminalinhalt">
+                <p><time>10:03:18</time><span class="terminal-ok">INFO</span> Prüfe betroffene Komponenten …</p>
+                <p><time>10:03:20</time><span class="terminal-warn">WARN</span> Abweichung in style.css erkannt</p>
+                <p><time>10:03:21</time><span class="terminal-warn">WARN</span> Unerwarteter Text in index.html</p>
+                <p><time>10:03:24</time><span class="terminal-kritisch">ALERT</span> Funktionswert stimmt nicht mit Status überein</p>
+                <p><time>10:03:27</time><span class="terminal-ok">INFO</span> Wiederherstellungsplan wird erstellt<span class="cursor">_</span></p>
+              </div>
+            </section>
+
+            <aside class="panel erkenntnisse" aria-labelledby="erkenntnistitel">
+              <div class="panelkopf">
+                <div>
+                  <p class="kennung">ANALYSE</p>
+                  <h2 id="erkenntnistitel">Erkenntnisse</h2>
+                </div>
+                <span>3 Hinweise</span>
+              </div>
+              <ul>
+                <li><span>01</span><p><strong>Mehrere Dateien betroffen</strong>Die Änderungen hängen wahrscheinlich zusammen.</p></li>
+                <li><span>02</span><p><strong>Auswirkung begrenzt</strong>Kundenportal offline, E-Mail-Gateway eingeschränkt, Webseite stabil.</p></li>
+                <li><span>03</span><p><strong>Wiederherstellung möglich</strong>Alle Abweichungen können einzeln geprüft werden.</p></li>
+              </ul>
+            </aside>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="showcase-fx.js"></script>
+  </body>
+</html>

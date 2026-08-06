@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Incident-Karte · NOVA Operations</title>
+    <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="showcase.css" />
+    <link rel="stylesheet" href="showcase-fx.css" />
+  </head>
+  <body>
+    <div class="app">
+      <aside class="seitenleiste">
+        <a class="marke" href="../start/index.html" aria-label="NOVA Operations Startseite">
+          NOVA<span>//OPS</span>
+        </a>
+
+        <nav aria-label="Hauptnavigation">
+          <p class="nav-label">Arbeitsbereich</p>
+          <a class="nav-eintrag" href="../start/index.html">
+            <span class="nav-symbol">01</span>
+            Übersicht
+          </a>
+          <a class="nav-eintrag" href="../start/index.html#systeme">
+            <span class="nav-symbol">02</span>
+            Systeme
+          </a>
+          <a class="nav-eintrag" href="../start/index.html#ereignisse">
+            <span class="nav-symbol">03</span>
+            Ereignisse
+          </a>
+          <p class="nav-label nav-label-zusatz">Lagebild</p>
+          <a class="nav-eintrag aktiv" href="incidents.html">
+            <span class="nav-symbol">04</span>
+            Incident-Karte
+            <span class="show-badge">EXTRA</span>
+          </a>
+          <a class="nav-eintrag" href="analyse.html">
+            <span class="nav-symbol">05</span>
+            Live-Analyse
+            <span class="show-badge">EXTRA</span>
+          </a>
+        </nav>
+
+        <div class="umgebung">
+          <span class="umgebungspunkt"></span>
+          <div>
+            <strong>Operations Center</strong>
+            <span>Nicht Teil der Aufgabe</span>
+          </div>
+        </div>
+      </aside>
+
+      <div class="hauptbereich">
+        <header class="kopfzeile">
+          <div>
+            <p class="pfad">Operations / Incident-Karte</p>
+            <h1>Alle Incidents</h1>
+          </div>
+          <div class="vorfall">
+            <span>LIVE STATUS</span>
+            <strong>12 OFFEN</strong>
+          </div>
+        </header>
+
+        <main>
+          <div class="demo-hinweis">
+            <span>EXTRA</span>
+            Diese Ansicht ist nicht Teil der Aufgabe.
+          </div>
+
+          <section class="kennzahlen showcase-kennzahlen" aria-label="Incident-Kennzahlen">
+            <article>
+              <span>Offene Incidents</span>
+              <strong>12</strong>
+              <small>−3 seit 08:00</small>
+            </article>
+            <article>
+              <span>Kritisch</span>
+              <strong class="wert-kritisch">3</strong>
+              <small>Sofortige Reaktion</small>
+            </article>
+            <article>
+              <span>Mittlere Lösungszeit</span>
+              <strong class="wert-warnung">18m</strong>
+              <small>Letzte 24 Stunden</small>
+            </article>
+          </section>
+
+          <section class="panel kartenpanel" aria-labelledby="kartentitel">
+            <div class="panelkopf">
+              <div>
+                <p class="kennung">GEOGRAPHISCHE LAGE</p>
+                <h2 id="kartentitel">Incident-Karte</h2>
+              </div>
+              <div class="kartenlegende" aria-label="Legende">
+                <span><i class="legende-kritisch"></i>Kritisch</span>
+                <span><i class="legende-warnung"></i>Beobachten</span>
+                <span><i class="legende-online"></i>Stabil</span>
+              </div>
+            </div>
+
+            <div
+              id="incidentKarte"
+              class="netzkarte"
+              role="region"
+              aria-label="Interaktive Karte mit sechs Standorten und aktiven Incidents"
+            ></div>
+            <p class="kartenquelle">
+              Karte: MapLibre · Style: OpenFreeMap · Standorte CH / DE / AT
+            </p>
+          </section>
+
+          <section class="panel incidentliste" aria-labelledby="incidenttitel">
+            <div class="panelkopf">
+              <div>
+                <p class="kennung">LIVE QUEUE</p>
+                <h2 id="incidenttitel">Aktuelle Incidents</h2>
+              </div>
+              <span>Aktualisiert vor 12 Sekunden</span>
+            </div>
+
+            <div class="tabellenkopf" aria-hidden="true">
+              <span>ID</span><span>Vorfall</span><span>Standort</span><span>Alter</span><span>Priorität</span>
+            </div>
+            <article class="incidentzeile">
+              <code>INC-07A</code><strong>Kundenportal nicht erreichbar</strong><span>Basel</span><span>15 min</span><em class="prioritaet kritisch">P1</em>
+            </article>
+            <article class="incidentzeile">
+              <code>INC-11F</code><strong>Fehlerhafte API-Antworten</strong><span>Bern</span><span>8 min</span><em class="prioritaet kritisch">P1</em>
+            </article>
+            <article class="incidentzeile">
+              <code>INC-14C</code><strong>E-Mail verzögert zugestellt</strong><span>Zürich</span><span>27 min</span><em class="prioritaet warnung">P2</em>
+            </article>
+            <article class="incidentzeile">
+              <code>INC-09B</code><strong>Synchronisation verlangsamt</strong><span>Luzern</span><span>41 min</span><em class="prioritaet warnung">P2</em>
+            </article>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+    <script src="karte.js"></script>
+    <script src="showcase-fx.js"></script>
+  </body>
+</html>
