@@ -27,6 +27,10 @@ const jobs = [
     html: path.join(here, "04-freestyle.html"),
     pdf: path.join(root, "missionskarten", "04-Freestyle.pdf"),
   },
+  {
+    html: path.join(here, "setup-leitfaden.html"),
+    pdf: path.join(root, "Setup-Leitfaden.pdf"),
+  },
 ];
 
 const browser = await chromium.launch({ channel: "chrome" });

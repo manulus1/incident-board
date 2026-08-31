@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Leitfaden · Rechner aufsetzen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="print.css" />
+  </head>
+  <body>
+    <article class="blatt karte">
+      <div class="karte-inner">
+        <header class="kopf">
+          <div class="logo">VIVA<span>//OPS</span></div>
+          <div class="kopf-meta">
+            <strong>SETUP</strong>
+            <span>Manuell · ohne PowerShell</span>
+          </div>
+        </header>
+
+        <div class="titelzeile">
+          <h1>Rechner aufsetzen</h1>
+          <span class="stempel">LEITFADEN</span>
+        </div>
+
+        <p class="lead">
+          So bereitest du einen neuen Rechner für die Einzelaufgabe vor.
+          Kein PowerShell, kein Git.
+        </p>
+
+        <div class="optionen einzeln">
+          <section class="option">
+            <div class="buchstabe">1</div>
+            <div>
+              <h2>WLAN verbinden</h2>
+              <p>Verbinde den Rechner mit dem WLAN.</p>
+            </div>
+          </section>
+
+          <section class="option">
+            <div class="buchstabe">2</div>
+            <div>
+              <h2>ZIP herunterladen</h2>
+              <p>
+                Öffne im Browser:<br />
+                <code>https://github.com/manulus1/incident-board</code>
+              </p>
+              <p style="margin-top: 1.6mm">
+                Klicke auf den grünen Button <strong>Code</strong>, danach auf
+                <strong>Download ZIP</strong>.
+              </p>
+            </div>
+          </section>
+
+          <section class="option">
+            <div class="buchstabe">3</div>
+            <div>
+              <h2>Entpacken und ZIP löschen</h2>
+              <p>
+                Entpacke die heruntergeladene Datei (Rechtsklick →
+                <strong>Alle extrahieren</strong>). Lösche danach die ZIP-Datei.
+              </p>
+              <p style="margin-top: 1.6mm">
+                Der Ordner heisst danach meist
+                <code>incident-board-main</code>.
+              </p>
+            </div>
+          </section>
+
+          <section class="option">
+            <div class="buchstabe">4</div>
+            <div>
+              <h2>Ordner «unterlagen» löschen</h2>
+              <p>
+                Öffne den entpackten Ordner und lösche den Ordner
+                <code>unterlagen</code>. Er darf auf dem Kandidatenrechner nicht
+                sichtbar sein.
+              </p>
+            </div>
+          </section>
+
+          <section class="option">
+            <div class="buchstabe">5</div>
+            <div>
+              <h2>Arbeitsordner auf den Desktop</h2>
+              <p>
+                Kopiere den Ordner <code>projekt</code> auf den Desktop.
+                Benenne die Kopie um in <code>vivaops</code>.
+              </p>
+            </div>
+          </section>
+        </div>
+
+        <div class="hinweis">
+          <strong>Fertig</strong>
+          Auf dem Desktop liegt jetzt <code>vivaops</code> mit
+          <code>start</code> und <code>showcase</code>. Für die Aufgabe nur
+          <code>vivaops\start</code> im Editor öffnen und
+          <code>index.html</code> im Browser starten.
+        </div>
+
+        <footer class="fuss">
+          <span>VIVA//OPS · Bewerbertag</span>
+          <span>Operation Restore · Setup ohne PowerShell</span>
+        </footer>
+      </div>
+    </article>
+  </body>
+</html>
