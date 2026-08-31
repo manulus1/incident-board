@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Aufgabenblatt · Operation Restore</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="print.css" />
+  </head>
+  <body>
+    <article class="blatt briefing">
+      <header class="kopf">
+        <div class="logo">VIVA<span>//OPS</span></div>
+        <div class="kopf-meta">
+          <strong>INCIDENT 07-A</strong>
+          <span>Operations Center · Region CH</span>
+        </div>
+      </header>
+
+      <div class="titelzeile">
+        <h1>Cyber Incident: Operation Restore</h1>
+        <span class="stempel">AUFGABENBLATT</span>
+      </div>
+
+      <section class="abschnitt">
+        <h2>Dein Auftrag</h2>
+        <p class="lead">
+          Das interne Status-Dashboard von <strong>VIVA Operations</strong> wurde
+          verändert. Einige Texte, Anzeigen und Werte stimmen nicht mehr.
+        </p>
+        <p>
+          Du übernimmst die Rolle einer Junior-Entwicklerin oder eines
+          Junior-Entwicklers. Stelle das Dashboard Schritt für Schritt wieder
+          her. Du brauchst dafür <strong>keine Programmiererfahrung</strong>.
+        </p>
+        <p>
+          Es zählt nicht, wie schnell du bist. Wichtig ist, wie du vorgehst,
+          ausprobierst, kontrollierst und bei Bedarf nach Hilfe fragst.
+        </p>
+      </section>
+
+      <section class="abschnitt">
+        <h2>Drei Dateien – drei Aufgaben</h2>
+        <div class="dateien">
+          <div class="datei">
+            <b>index.html</b>
+            <span>Enthält Texte und den Aufbau der Seite.</span>
+          </div>
+          <div class="datei">
+            <b>style.css</b>
+            <span>Bestimmt Farben und Aussehen.</span>
+          </div>
+          <div class="datei">
+            <b>script.js</b>
+            <span>Bestimmt, was beim Klick auf den Button geschieht.</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="abschnitt">
+        <h2>Bevor du beginnst</h2>
+        <div class="zwei">
+          <ol class="schritte">
+            <li>Öffne den Ordner <code>projekt/start</code>.</li>
+            <li>Öffne <code>index.html</code> im Browser.</li>
+            <li>Öffne den ganzen Ordner <code>start</code> im Editor.</li>
+            <li>Lege Browser und Editor nebeneinander.</li>
+            <li>
+              Betrachte die Seite für zwei Minuten. Was wirkt verdächtig oder
+              unpassend?
+            </li>
+          </ol>
+          <div class="hinweis">
+            <strong>Nach jeder Änderung</strong>
+            1. Datei speichern: <kbd>Ctrl</kbd> + <kbd>S</kbd><br />
+            2. Browser neu laden: <kbd>Ctrl</kbd> + <kbd>R</kbd><br />
+            3. Ergebnis kontrollieren<br />
+            4. Erst danach zur nächsten Mission wechseln
+          </div>
+        </div>
+      </section>
+
+      <section class="mission">
+        <div class="mission-kopf">
+          <div>
+            <div class="nr">MISSION 01</div>
+            <h2>Einsatzmeldung wiederherstellen</h2>
+          </div>
+          <div class="badges">
+            <span class="badge"><em>DATEI</em>index.html</span>
+            <span class="badge"><em>SUCHE</em>ALLES KAPUTT</span>
+          </div>
+        </div>
+        <p>Die grosse Überschrift wurde manipuliert. Ersetze den gesamten Text durch:</p>
+        <p class="ersatz">SYSTEME UNTER PRÜFUNG.</p>
+        <p class="pruefung">
+          <strong>Prüfung:</strong> Speichern und Browser neu laden. Ist die neue
+          Überschrift vollständig sichtbar?
+        </p>
+        <ul class="checks">
+          <li><span class="box"></span> Änderung gespeichert</li>
+          <li><span class="box"></span> Im Browser geprüft</li>
+        </ul>
+      </section>
+
+      <section class="mission">
+        <div class="mission-kopf">
+          <div>
+            <div class="nr">MISSION 02</div>
+            <h2>Hauptstatus korrigieren</h2>
+          </div>
+          <div class="badges">
+            <span class="badge"><em>DATEI</em>index.html</span>
+            <span class="badge"><em>SUCHE</em>ALLES NORMAL</span>
+          </div>
+        </div>
+        <p>Der Hauptstatus widerspricht den angezeigten Störungen. Ändere ihn zu:</p>
+        <p class="ersatz">STÖRUNG ERKANNT</p>
+        <p>
+          Achte darauf, nur den sichtbaren Text und nicht die Zeichen
+          <code>&lt;</code> und <code>&gt;</code> zu verändern.
+        </p>
+        <p class="pruefung">
+          <strong>Prüfung:</strong> Der neue Status steht im oberen Vorfallbereich
+          neben dem Prüf-Button.
+        </p>
+        <ul class="checks">
+          <li><span class="box"></span> Änderung gespeichert</li>
+          <li><span class="box"></span> Im Browser geprüft</li>
+        </ul>
+      </section>
+
+      <section class="mission">
+        <div class="mission-kopf">
+          <div>
+            <div class="nr">MISSION 03</div>
+            <h2>Protokolleintrag bereinigen</h2>
+          </div>
+          <div class="badges">
+            <span class="badge"><em>DATEI</em>index.html</span>
+            <span class="badge"><em>SUCHE</em>H4H4</span>
+          </div>
+        </div>
+        <p>Ersetze den manipulierten Eintrag durch eine sachliche Meldung:</p>
+        <p class="ersatz">Unbekannte Änderung am Dashboard</p>
+        <p class="pruefung">
+          <strong>Prüfung:</strong> Im Ereignisprotokoll stehen weiterhin drei
+          Einträge.
+        </p>
+        <ul class="checks">
+          <li><span class="box"></span> Änderung gespeichert</li>
+          <li><span class="box"></span> Im Browser geprüft</li>
+        </ul>
+      </section>
+
+      <section class="mission">
+        <div class="mission-kopf">
+          <div>
+            <div class="nr">MISSION 04</div>
+            <h2>Kritische Farbe reparieren</h2>
+          </div>
+          <div class="badges">
+            <span class="badge"><em>DATEI</em>style.css</span>
+            <span class="badge"><em>SUCHE</em>--kritisch</span>
+          </div>
+        </div>
+        <p>
+          Die kritischen Anzeigen sind violett. Für dieses Dashboard sollen sie
+          rot erscheinen. Ersetze beim ersten Vorkommen von
+          <code>--kritisch</code> nur den Farbwert durch:
+        </p>
+        <p class="ersatz">#ff5a54</p>
+        <p class="pruefung">
+          <strong>Prüfung:</strong> Mindestens drei Stellen der Seite sind jetzt
+          rot: der Hauptstatus, «OFFLINE» und der letzte Protokolleintrag.
+        </p>
+        <ul class="checks">
+          <li><span class="box"></span> Änderung gespeichert</li>
+          <li><span class="box"></span> Im Browser geprüft</li>
+        </ul>
+        <p class="erklaert">
+          <strong>Kurz erklärt: Farbcodes.</strong>
+          Ein Farbcode beginnt mit <code>#</code> und enthält sechs Zeichen. Das
+          Semikolon <code>;</code> dahinter muss stehen bleiben.
+        </p>
+      </section>
+
+      <section class="mission">
+        <div class="mission-kopf">
+          <div>
+            <div class="nr">MISSION 05</div>
+            <h2>Systemprüfung korrigieren</h2>
+          </div>
+          <div class="badges">
+            <span class="badge"><em>DATEI</em>script.js</span>
+            <span class="badge"><em>SUCHE</em>anzahlBetroffeneSysteme</span>
+          </div>
+        </div>
+        <p>
+          Im Dashboard sind zwei Systeme betroffen: eines ist offline und eines
+          eingeschränkt. Im JavaScript wurde jedoch die Zahl manipuliert.
+        </p>
+        <p>
+          Ändere in der Zeile unter dem Kommentar <code>Mission 5</code> die
+          falsche Zahl auf die richtige Anzahl. Verändere sonst nichts.
+        </p>
+        <p class="pruefung">
+          <strong>Prüfung:</strong> Speichern und Browser neu laden. Auf «Systeme
+          prüfen» klicken. Die Meldung muss die richtige Anzahl betroffener
+          Systeme anzeigen.
+        </p>
+        <ul class="checks">
+          <li><span class="box"></span> Änderung gespeichert</li>
+          <li><span class="box"></span> Button getestet</li>
+          <li><span class="box"></span> Angezeigte Anzahl kontrolliert</li>
+        </ul>
+        <p class="erklaert">
+          <strong>Kurz erklärt: Anführungszeichen und Klammern.</strong>
+          Texte stehen in JavaScript zwischen Anführungszeichen. Runde
+          <code>()</code>, eckige <code>[]</code> und geschweifte
+          <code>{}</code> Klammern gehören immer zusammen. Für diese Mission
+          musst du keine davon verändern.
+        </p>
+      </section>
+
+      <section class="mission">
+        <div class="mission-kopf">
+          <div>
+            <div class="nr">MISSION 06</div>
+            <h2>Abschlusskontrolle</h2>
+          </div>
+        </div>
+        <p>
+          Teste das Dashboard wie eine andere Person, die deine Änderungen nicht
+          kennt:
+        </p>
+        <ul class="checks">
+          <li><span class="box"></span> Seite neu geladen</li>
+          <li><span class="box"></span> Überschrift verständlich</li>
+          <li><span class="box"></span> Hauptstatus passt zu den Diensten</li>
+          <li><span class="box"></span> Kritische Anzeigen rot</li>
+          <li><span class="box"></span> Protokoll sachlich</li>
+          <li><span class="box"></span> Prüf-Button funktioniert</li>
+          <li><span class="box"></span> Keine versehentlich gelöschten Inhalte entdeckt</li>
+        </ul>
+        <p style="margin-top: 3.5mm">
+          Wenn alles erledigt ist, melde dich bei der Betreuung. Deine Aufgabe
+          ist damit <strong>vollständig abgeschlossen</strong>. Falls noch Zeit
+          und Interesse vorhanden sind, erhältst du freiwillig eine weitere
+          Missionskarte.
+        </p>
+      </section>
+
+      <div class="hilfe">
+        <div class="kasten">
+          <h2>Wenn du nicht weiterkommst</h2>
+          <ol>
+            <li>Lies den Auftrag nochmals langsam.</li>
+            <li>Prüfe Dateiname und Suchbegriff.</li>
+            <li>Vergleiche deine letzte Änderung mit den Zeilen rundherum.</li>
+            <li>
+              Melde dich bei der Betreuung und erkläre kurz, woran du arbeitest
+              und was nicht klappt.
+            </li>
+          </ol>
+        </div>
+        <div class="kasten hell">
+          <h2>Hilfe ist erlaubt</h2>
+          <p>
+            Um Hilfe zu bitten ist ausdrücklich erlaubt. Die Betreuung hilft dir
+            mündlich weiter. KI-Werkzeuge werden während dieser Einzelaufgabe
+            nicht verwendet.
+          </p>
+        </div>
+      </div>
+    </article>
+  </body>
+</html>

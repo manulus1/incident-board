@@ -1,0 +1,11 @@
+{
+  "name": "operation-restore-pdf",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "generate": "node generate.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "^1.62.1"
+  }
+}

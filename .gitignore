@@ -4,3 +4,5 @@ arbeitsplaetze/
 Thumbs.db
 .vscode/
 .idea/
+node_modules/
+unterlagen/pdf/preview/

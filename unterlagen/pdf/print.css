@@ -1,0 +1,624 @@
+/* VIVA//OPS briefing print system */
+
+:root {
+  --navy: #0b1017;
+  --navy-2: #121922;
+  --ink: #161c24;
+  --muted: #5a6573;
+  --line: #d5d0c6;
+  --paper: #f6f3ec;
+  --paper-2: #eee9df;
+  --panel: #ffffff;
+  --akzent: #0e8f74;
+  --akzent-deep: #0a6b57;
+  --akzent-soft: #d8f4ec;
+  --warnung: #b57a12;
+  --warnung-soft: #f8ecd0;
+  --kritisch: #c4453d;
+  --kritisch-soft: #f8d9d6;
+  --mono: "JetBrains Mono", Consolas, "Courier New", monospace;
+  --sans: Inter, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+}
+
+body {
+  font-size: 10.5pt;
+  line-height: 1.45;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+@page {
+  size: A4;
+  margin: 0;
+}
+
+.blatt {
+  min-height: 297mm;
+  padding: 0 16mm 16mm;
+}
+
+.blatt.briefing {
+  padding-bottom: 8mm;
+}
+
+.blatt.karte {
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Header */
+
+.kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 0 -16mm 11mm;
+  padding: 11mm 16mm 8mm;
+  background: var(--navy);
+  color: #edf1f5;
+}
+
+.karte .kopf {
+  margin: 0;
+  padding: 12mm 14mm 9mm;
+}
+
+.logo {
+  font-size: 11pt;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+
+.logo span {
+  color: #67e8c2;
+}
+
+.kopf-meta {
+  text-align: right;
+}
+
+.kopf-meta strong {
+  display: block;
+  color: #67e8c2;
+  font-family: var(--mono);
+  font-size: 8.5pt;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+.kopf-meta span {
+  display: block;
+  margin-top: 3px;
+  color: #8d98a6;
+  font-size: 8pt;
+  letter-spacing: 0.04em;
+}
+
+.titelzeile {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 8mm;
+  padding-bottom: 4.5mm;
+  border-bottom: 1.5px solid var(--ink);
+}
+
+.titelzeile h1 {
+  font-size: 20pt;
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.stempel {
+  padding: 3px 8px;
+  border: 1.4px solid currentColor;
+  color: var(--akzent-deep);
+  font-family: var(--mono);
+  font-size: 7.5pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  white-space: nowrap;
+}
+
+.stempel.warn {
+  color: var(--warnung);
+}
+
+.stempel.feature {
+  color: #1a6f9c;
+}
+
+.stempel.frei {
+  color: #5b4aa8;
+}
+
+.lead {
+  max-width: 168mm;
+  margin-bottom: 7mm;
+  color: #2a323c;
+  font-size: 11.5pt;
+  line-height: 1.4;
+}
+
+.lead strong {
+  color: var(--ink);
+}
+
+/* Sections */
+
+.abschnitt {
+  margin-bottom: 7mm;
+}
+
+.abschnitt h2 {
+  margin-bottom: 3mm;
+  color: var(--akzent-deep);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.abschnitt p + p {
+  margin-top: 2.4mm;
+}
+
+.zwei {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6mm;
+  align-items: stretch;
+}
+
+.zwei > * {
+  height: 100%;
+}
+
+.dateien {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4mm;
+  margin-top: 1mm;
+}
+
+.datei {
+  padding: 4.5mm 4.5mm 4mm;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.datei b {
+  display: block;
+  margin-bottom: 1.5mm;
+  color: var(--akzent-deep);
+  font-family: var(--mono);
+  font-size: 9pt;
+  font-weight: 700;
+}
+
+.datei span {
+  display: block;
+  color: var(--muted);
+  font-size: 9pt;
+  line-height: 1.35;
+}
+
+.schritte {
+  padding: 4.5mm 5mm 4mm 12mm;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.schritte li + li {
+  margin-top: 1.4mm;
+}
+
+.hinweis {
+  margin-top: 4mm;
+  padding: 3.5mm 4.5mm;
+  background: var(--paper-2);
+  font-size: 9.5pt;
+}
+
+.zwei .hinweis {
+  margin-top: 0;
+}
+
+.hinweis strong {
+  display: block;
+  margin-bottom: 2mm;
+  color: var(--akzent-deep);
+  font-size: 7.5pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+kbd {
+  display: inline-block;
+  padding: 1px 5px;
+  border: 1px solid #c5c0b6;
+  border-bottom-width: 2px;
+  background: #fff;
+  font-family: var(--mono);
+  font-size: 8.5pt;
+  line-height: 1.3;
+}
+
+code {
+  padding: 0 4px;
+  background: var(--akzent-soft);
+  color: var(--akzent-deep);
+  font-family: var(--mono);
+  font-size: 8.8pt;
+  white-space: nowrap;
+}
+
+/* Missions */
+
+.mission {
+  break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: 5.5mm;
+  padding: 5mm 5.5mm 4.5mm;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.mission-kopf {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 3mm;
+}
+
+.mission h2 {
+  font-size: 13pt;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.nr {
+  color: var(--akzent);
+  font-family: var(--mono);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2mm;
+}
+
+.badge {
+  padding: 2px 7px;
+  background: var(--navy);
+  color: #edf1f5;
+  font-family: var(--mono);
+  font-size: 7.6pt;
+  letter-spacing: 0.02em;
+}
+
+.badge em {
+  margin-right: 6px;
+  color: #67e8c2;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.mission p {
+  margin-bottom: 2.4mm;
+}
+
+.ersatz {
+  margin: 3mm 0;
+  padding: 3mm 4.5mm;
+  border-left: 3px solid var(--akzent);
+  background: var(--akzent-soft);
+  color: var(--akzent-deep);
+  font-family: var(--mono);
+  font-size: 11pt;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.pruefung {
+  margin: 3mm 0 2.5mm;
+  color: #33404d;
+  font-size: 9.7pt;
+}
+
+.pruefung strong {
+  color: var(--ink);
+}
+
+.checks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5mm 7mm;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.checks li {
+  display: flex;
+  align-items: center;
+  gap: 2.2mm;
+  font-size: 9.3pt;
+}
+
+.box {
+  width: 9.5pt;
+  height: 9.5pt;
+  flex: 0 0 9.5pt;
+  border: 1.3px solid var(--ink);
+  background: #fff;
+}
+
+.erklaert {
+  margin-top: 3.5mm;
+  padding-top: 3mm;
+  border-top: 1px dashed #cfc9bd;
+  color: var(--muted);
+  font-size: 9pt;
+}
+
+.erklaert strong {
+  color: var(--ink);
+}
+
+.hilfe {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 5mm;
+  break-inside: avoid;
+}
+
+.kasten {
+  padding: 5mm;
+  background: var(--navy);
+  color: #edf1f5;
+}
+
+.kasten h2 {
+  margin-bottom: 3mm;
+  color: #67e8c2;
+  font-size: 8pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.kasten ol {
+  padding-left: 4.5mm;
+}
+
+.kasten li + li {
+  margin-top: 1.6mm;
+}
+
+.kasten.hell {
+  background: var(--paper-2);
+  color: var(--ink);
+}
+
+.kasten.hell h2 {
+  color: var(--akzent-deep);
+}
+
+.fuss {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6mm;
+  padding-top: 3mm;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 7.4pt;
+  letter-spacing: 0.06em;
+}
+
+/* Mission cards */
+
+.karte-inner {
+  min-height: 297mm;
+  display: flex;
+  flex-direction: column;
+  padding: 0 16mm 14mm;
+}
+
+.karte .titelzeile {
+  margin-top: 8mm;
+}
+
+.karte .lead {
+  font-size: 12pt;
+}
+
+.optionen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4mm;
+  margin: 1mm 0 7mm;
+  align-items: stretch;
+}
+
+.optionen.einzeln {
+  grid-template-columns: 1fr;
+}
+
+.option {
+  display: grid;
+  grid-template-columns: 14mm 1fr;
+  gap: 3.5mm;
+  padding: 4mm 4.5mm;
+  border: 1px solid var(--line);
+  background: var(--panel);
+  break-inside: avoid;
+}
+
+.option .buchstabe {
+  color: var(--akzent);
+  font-family: var(--mono);
+  font-size: 16pt;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.option h2 {
+  margin-bottom: 1.2mm;
+  font-size: 11.5pt;
+}
+
+.option p,
+.option ul {
+  color: #33404d;
+  font-size: 10pt;
+}
+
+.option ul {
+  padding-left: 4.5mm;
+}
+
+.option li + li {
+  margin-top: 0.8mm;
+}
+
+.alarm {
+  margin: 0 0 6mm;
+  padding: 4mm 5mm;
+  background: var(--akzent);
+  color: #06281f;
+  font-size: 10.5pt;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.vorgehen {
+  padding: 4.5mm 5mm 4.5mm 12mm;
+  border: 1px solid var(--line);
+  background: var(--panel);
+}
+
+.vorgehen li + li {
+  margin-top: 1.6mm;
+}
+
+.linien {
+  margin: 2mm 0 6mm;
+  padding: 0;
+  list-style: none;
+}
+
+.linien li {
+  margin-bottom: 6mm;
+}
+
+.linien strong {
+  display: block;
+  margin-bottom: 2mm;
+}
+
+.linie {
+  display: block;
+  height: 9mm;
+  border-bottom: 1px solid #b9b3a8;
+}
+
+.fragen {
+  margin: 0 0 6mm;
+  padding-left: 5mm;
+}
+
+.fragen li + li {
+  margin-top: 2mm;
+}
+
+.notizen {
+  break-inside: avoid;
+  margin: 2mm 0 0;
+  padding: 4.5mm 5mm 5mm;
+  border: 1px dashed #cfc9bd;
+}
+
+.notizen h2 {
+  margin-bottom: 2mm;
+  color: var(--akzent-deep);
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.notizen .linie {
+  height: 8mm;
+}
+
+.karte .hinweis {
+  margin-top: auto;
+}
+
+.karte.upgrade .option .buchstabe,
+.karte.upgrade .stempel {
+  color: var(--warnung);
+}
+
+.karte.upgrade .kopf-meta strong,
+.karte.upgrade .logo span {
+  color: #f4b942;
+}
+
+.karte.feature .option .buchstabe {
+  color: #1a6f9c;
+}
+
+.karte.feature .kopf-meta strong,
+.karte.feature .logo span {
+  color: #7ec8ea;
+}
+
+.karte.frei .option .buchstabe,
+.karte.frei .stempel {
+  color: #5b4aa8;
+}
+
+.karte.frei .kopf-meta strong,
+.karte.frei .logo span {
+  color: #c4b5fd;
+}
+
+@media print {
+  .blatt:not(.karte) {
+    min-height: auto;
+  }
+}
